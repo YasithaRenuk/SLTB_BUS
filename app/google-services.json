@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "765842770037",
+    "project_id": "sltb-bus-driver",
+    "storage_bucket": "sltb-bus-driver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765842770037:android:1b7149bd61aa9c9bae503c",
+        "android_client_info": {
+          "package_name": "com.example.sltb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765842770037-l5m37n205b0mr5vhljtf48tnn9m21qmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-CyMrKVdmaLx6sU43HKEoApblefAHek8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765842770037-l5m37n205b0mr5vhljtf48tnn9m21qmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765842770037:android:8f43081d610109aaae503c",
+        "android_client_info": {
+          "package_name": "com.example.sltb_bus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765842770037-l5m37n205b0mr5vhljtf48tnn9m21qmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-CyMrKVdmaLx6sU43HKEoApblefAHek8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765842770037-l5m37n205b0mr5vhljtf48tnn9m21qmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
