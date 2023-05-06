@@ -1,10 +1,14 @@
 package com.example.sltb_bus.Driver
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.sltb_bus.DLoginActivity
 import com.example.sltb_bus.R
+import com.example.sltb_bus.UpdateActivity
 import com.google.firebase.database.*
 
 class DriverProfileViewActivty : AppCompatActivity() {
@@ -14,8 +18,10 @@ class DriverProfileViewActivty : AppCompatActivity() {
     private lateinit var DAge : TextView
     private lateinit var DDID : TextView
     private lateinit var DEmail : TextView
+    private  lateinit var btUpdate :Button
+    private  lateinit var btDelete :Button
+    private  lateinit var id:String
     private lateinit var dbRef: DatabaseReference
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +32,8 @@ class DriverProfileViewActivty : AppCompatActivity() {
         DAge = findViewById(R.id.tvAge)
         DDID = findViewById(R.id.tVId)
         DEmail = findViewById(R.id.tvEmail)
+        btUpdate = findViewById(R.id.update)
+        btDelete = findViewById(R.id.Delete)
 
         val email = intent.extras!!.getString("Email")
         val Type = intent.extras!!.getString("Type")
@@ -35,6 +43,11 @@ class DriverProfileViewActivty : AppCompatActivity() {
             }
         }
 
+        btUpdate.setOnClickListener {
+            if (Type != null) {
+                sendtoupdate(Type)
+            }
+        }
 
     }
 
@@ -55,7 +68,11 @@ class DriverProfileViewActivty : AppCompatActivity() {
                         val lastname = ds.child("lastName").getValue(String::class.java)
                         val age = ds.child("age").getValue(String::class.java)
                         val nic = ds.child("nic").getValue(String::class.java)
-
+                        if(Type.equals("Driver")) {
+                            id = ds.child("DriverID").getValue(String::class.java).toString()
+                        }else{
+                            id = ds.child("PassengerID").getValue(String::class.java).toString()
+                        }
                         DFname.setText(fristname)
                         DLname.setText(lastname)
                         DAge.setText(age)
@@ -72,5 +89,22 @@ class DriverProfileViewActivty : AppCompatActivity() {
                 Toast.makeText(this@DriverProfileViewActivty,"Error", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+    private  fun sendtoupdate(type:String){
+        val Fname = DFname.text.toString()
+        val Lname = DLname.text.toString()
+        val age = DAge.text.toString()
+        val nic = DDID.text.toString()
+        val email = DEmail.text.toString()
+
+        val intent = Intent(this, UpdateActivity::class.java)
+        intent.putExtra("Type",type)
+        intent.putExtra("Fname",Fname)
+        intent.putExtra("Lname",Lname)
+        intent.putExtra("age",age)
+        intent.putExtra("nic",nic)
+        intent.putExtra("Email",email)
+        intent.putExtra("id",id)
+        startActivity(intent)
     }
 }

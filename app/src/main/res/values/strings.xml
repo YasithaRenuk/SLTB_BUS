@@ -30,4 +30,6 @@
     <string name="driver">Driver</string>
     <string name="passenger">Passenger</string>
     <string name="passenger_profile_creater">Passenger Profile Creater</string>
+    <string name="profile">Profile</string>
+    <string name="update_profile">Update Profile</string>
 </resources>

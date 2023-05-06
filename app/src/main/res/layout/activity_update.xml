@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Driver.DriverProfileViewActivty">
+    tools:context=".UpdateActivity">
 
     <TextView
         android:id="@+id/tvdprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="@string/profile"
+        android:text="@string/update_profile"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvLastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/tvFristname"
         app:layout_constraintStart_toEndOf="@+id/tvFristname" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvFristname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="@+id/tvEmail"
         app:layout_constraintStart_toEndOf="@+id/tvEmail" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/Email"
         app:layout_constraintStart_toEndOf="@+id/Email" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         app:layout_constraintStart_toStartOf="@+id/tvEmail"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-    <TextView
+    <EditText
         android:id="@+id/tVId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="92dp"
         android:text="@string/name"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvFristname"
         app:layout_constraintStart_toStartOf="parent" />
@@ -91,7 +91,7 @@
         android:id="@+id/Age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="40dp"
         android:text="@string/age"
         app:layout_constraintStart_toStartOf="@+id/Email"
         app:layout_constraintTop_toBottomOf="@+id/Email" />
@@ -100,7 +100,7 @@
         android:id="@+id/Nic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="52dp"
         android:text="@string/nic"
         app:layout_constraintEnd_toEndOf="@+id/Age"
         app:layout_constraintTop_toBottomOf="@+id/Age" />
@@ -109,19 +109,13 @@
         android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
         android:text="Update"
-        app:layout_constraintStart_toStartOf="@+id/tVId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tVId" />
 
-    <Button
-        android:id="@+id/Delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:text="Delete"
-        app:layout_constraintStart_toStartOf="@+id/update"
-        app:layout_constraintTop_toBottomOf="@+id/update" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
