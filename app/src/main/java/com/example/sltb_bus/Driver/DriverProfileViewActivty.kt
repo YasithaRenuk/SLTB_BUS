@@ -76,9 +76,9 @@ class DriverProfileViewActivty : AppCompatActivity() {
                         val age = ds.child("age").getValue(String::class.java)
                         val nic = ds.child("nic").getValue(String::class.java)
                         if(Type.equals("Driver")) {
-                            id = ds.child("DriverID").getValue(String::class.java).toString()
+                            id = ds.child("driverID").getValue(String::class.java).toString()
                         }else{
-                            id = ds.child("PassengerID").getValue(String::class.java).toString()
+                            id = ds.child("passengerID").getValue(String::class.java).toString()
                         }
                         DFname.setText(fristname)
                         DLname.setText(lastname)
