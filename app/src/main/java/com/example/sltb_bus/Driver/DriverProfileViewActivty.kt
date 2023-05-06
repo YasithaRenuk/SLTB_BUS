@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.sltb_bus.DLoginActivity
 import com.example.sltb_bus.R
 import com.example.sltb_bus.UpdateActivity
+import com.example.sltb_bus.UserTypeActivity
 import com.google.firebase.database.*
 
 class DriverProfileViewActivty : AppCompatActivity() {
@@ -46,6 +47,12 @@ class DriverProfileViewActivty : AppCompatActivity() {
         btUpdate.setOnClickListener {
             if (Type != null) {
                 sendtoupdate(Type)
+            }
+        }
+
+        btDelete.setOnClickListener {
+            if (Type != null) {
+                delete(Type)
             }
         }
 
@@ -106,5 +113,20 @@ class DriverProfileViewActivty : AppCompatActivity() {
         intent.putExtra("Email",email)
         intent.putExtra("id",id)
         startActivity(intent)
+    }
+
+    private  fun delete(Type:String){
+        if(Type.equals("Driver")) {
+            dbRef = FirebaseDatabase.getInstance().getReference("Drivers")
+        }else{
+            dbRef = FirebaseDatabase.getInstance().getReference("Passengers")
+        }
+        dbRef.child(id).removeValue().addOnSuccessListener {
+            Toast.makeText(this, "Successfly Deleted", Toast.LENGTH_LONG).show()
+            val intent =Intent(this, UserTypeActivity::class.java)
+            startActivity(intent)
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failured Deleted", Toast.LENGTH_LONG).show()
+        }
     }
 }
