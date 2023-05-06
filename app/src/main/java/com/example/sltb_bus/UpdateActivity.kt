@@ -45,15 +45,21 @@ class UpdateActivity : AppCompatActivity() {
         DEmail.setText(email)
 
         btUpdate.setOnClickListener {
-            if (Type != null && age != null && id != null && fname != null && lname != null && nic != null && email != null) {
-                readdata(Type, age, id, fname, lname, nic, email);
+            if (Type != null && id != null) {
+                readdata(Type, id);
             }
 
 
         }
 
     }
-    private  fun readdata(Type:String,age:String,id:String,fname:String,lname:String,nic:String,email:String){
+    private  fun readdata(Type:String,id:String){
+        val age = DAge.text.toString()
+        val email = DEmail.text.toString()
+        val fname = DFname.text.toString()
+        val lname = DLname.text.toString()
+        val nic = DDID.text.toString()
+
         if(Type.equals("Driver")) {
             dbRef = FirebaseDatabase.getInstance().getReference("Drivers")
         }else{
