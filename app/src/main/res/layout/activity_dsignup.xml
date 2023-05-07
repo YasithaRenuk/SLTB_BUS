@@ -7,6 +7,17 @@
     android:background="#E6D6ED"
     tools:context=".DSignupActivity">
 
+    <TextView
+        android:id="@+id/copyright_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/copyright_sltb"
+        android:textColor="#4B3B4E"
+        android:textSize="12sp" />
+
     <ImageView
         android:id="@+id/logo_image"
         android:layout_marginLeft="70dp"
