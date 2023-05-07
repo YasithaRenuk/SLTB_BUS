@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6D6ED"
     tools:context=".Driver.AddBusActivity">
 
     <LinearLayout
@@ -26,7 +27,7 @@
             android:layout_marginLeft="30dp"
             android:textSize="18sp"
             android:hint="@string/bus_number"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:id="@+id/etbusNumber"
             android:drawableLeft="@drawable/ic_bus"
             android:drawablePadding="8dp"/>

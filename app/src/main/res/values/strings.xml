@@ -11,7 +11,7 @@
     <string name="last_name">Last Name</string>
     <string name="nic">NIC</string>
     <string name="age">Age</string>
-    <string name="driver_profile_creater">Driver Profile Creater</string>
+    <string name="driver_profile_creater">Driver Profile</string>
     <string name="save">Save</string>
     <string name="driver_dashbord">Driver Dashbord</string>
     <string name="view_profile">View Profile</string>
@@ -29,7 +29,7 @@
     <string name="passenger_dashbord">Passenger Dashboard</string>
     <string name="driver">Driver</string>
     <string name="passenger">Passenger</string>
-    <string name="passenger_profile_creater">Passenger Profile Creater</string>
+    <string name="passenger_profile_creater">Passenger Profile</string>
     <string name="profile">Profile</string>
     <string name="update_profile">Update Profile</string>
     <string name="bus_number">Bus Number</string>
