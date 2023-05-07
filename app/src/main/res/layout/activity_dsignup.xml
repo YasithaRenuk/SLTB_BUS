@@ -53,7 +53,7 @@
         android:drawablePadding="8dp"/>
 
     <EditText
-        android:id="@string/comfirm_password"
+        android:id="@+id/sigup_confing"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_below="@+id/sigup_password"
@@ -74,7 +74,7 @@
         android:id="@+id/signup_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@string/comfirm_password"
+        android:layout_below="@+id/sigup_confing"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="50dp"
@@ -82,11 +82,10 @@
         android:text="@string/register"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:padding="8dp"
-         />
+        android:padding="8dp" />
 
     <TextView
-        android:id="@+id/login_text"
+        android:id="@+id/LoginRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signup_button"
