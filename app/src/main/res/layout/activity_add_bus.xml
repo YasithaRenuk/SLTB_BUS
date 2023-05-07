@@ -25,8 +25,19 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:textSize="18sp"
-            android:hint="@string/start_location"
+            android:hint="@string/bus_number"
             android:layout_marginTop="100dp"
+            android:id="@+id/etbusNumber"
+            android:drawableLeft="@drawable/ic_bus"
+            android:drawablePadding="8dp"/>
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="18sp"
+            android:hint="@string/start_location"
+            android:layout_marginTop="20dp"
             android:id="@+id/etstlocation"
             android:drawableLeft="@drawable/ic_bus"
             android:drawablePadding="8dp"/>

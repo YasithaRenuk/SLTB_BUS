@@ -19,6 +19,7 @@ class AddBusActivity : AppCompatActivity() {
     private lateinit var endt: EditText
     private lateinit var bdate: EditText
     private lateinit var nofoseat: EditText
+    private  lateinit var busnumber:EditText
     private lateinit var btsave : Button
 
     private lateinit var dbRef: DatabaseReference
@@ -34,6 +35,7 @@ class AddBusActivity : AppCompatActivity() {
         bdate = findViewById(R.id.etdate)
         nofoseat = findViewById(R.id.etNoFoSeat)
         btsave = findViewById(R.id.btnsave)
+        busnumber = findViewById(R.id.etbusNumber)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Bus")
 
@@ -54,11 +56,12 @@ class AddBusActivity : AppCompatActivity() {
         val et = endt.text.toString()
         val date =bdate.text.toString()
         val nfs = nofoseat.text.toString().toInt()
+        val bnumber = busnumber.text.toString()
 
         if(sl.isNotEmpty() && el.isNotEmpty() && st.isNotEmpty() && et.isNotEmpty()){
 
             val BusId = dbRef.push().key!!
-            val bus = BusModel(BusId,name,sl,el,st,et,date,nfs,0)
+            val bus = BusModel(BusId,bnumber,name,sl,el,st,et,date,nfs,0)
             dbRef.child(BusId).setValue(bus)
                 .addOnCompleteListener {
                     Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()

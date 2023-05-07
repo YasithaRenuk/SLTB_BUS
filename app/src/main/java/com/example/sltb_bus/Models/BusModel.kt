@@ -2,6 +2,7 @@ package com.example.sltb_bus.Models
 
 data class BusModel (
     var BusID : String?,
+    var BusNumbr:String?,
     var DEmail:String?,
     var StartLocation : String?,
     var EndLocation:String?,
