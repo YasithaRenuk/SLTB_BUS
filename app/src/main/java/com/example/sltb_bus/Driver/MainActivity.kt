@@ -34,5 +34,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("Email",email)
             startActivity(intent)
         }
+
+        bttrakingtrn.setOnClickListener {
+            val intent = Intent(this, StartTurn::class.java)
+            intent.putExtra("Email",email)
+            startActivity(intent)
+        }
     }
 }
