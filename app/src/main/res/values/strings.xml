@@ -5,7 +5,7 @@
     <string name="comfirm_password">Comfirm Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_an_user_login">Already an User? Login</string>
-    <string name="not_yet_reqistered_signup">Not yet reqistered? Signup</string>
+    <string name="not_yet_reqistered_signup">Not yet registered? Signup</string>
     <string name="login">Login</string>
     <string name="frist_name">Frist Name</string>
     <string name="last_name">Last Name</string>
@@ -26,7 +26,7 @@
     <string name="end_time">End Time</string>
     <string name="Date">Date</string>
     <string name="no_fo_seat">No Fo Seat</string>
-    <string name="passenger_dashbord">Passenger dashbord</string>
+    <string name="passenger_dashbord">Passenger Dashboard</string>
     <string name="driver">Driver</string>
     <string name="passenger">Passenger</string>
     <string name="passenger_profile_creater">Passenger Profile Creater</string>
@@ -35,4 +35,11 @@
     <string name="bus_number">Bus Number</string>
     <string name="copyright_sltb">Copyright SLTB</string>
     <string name="register">Register</string>
+    <string name="booking">Booking</string>
+    <string name="setting">setting</string>
+    <string name="rout_check">Rout Check</string>
+    <string name="time_table">Time Table</string>
+    <string name="offers">Offers</string>
+    <string name="contact_us">Contact us</string>
+    <string name="welcome_to_sri_lanka_transportations_board">Welcome to Sri Lanka Transportations Board</string>
 </resources>
