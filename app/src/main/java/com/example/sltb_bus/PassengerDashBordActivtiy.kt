@@ -38,5 +38,11 @@ class PassengerDashBordActivtiy : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btbook.setOnClickListener {
+            val intent = Intent(this, cheking::class.java)
+            intent.putExtra("Email",email)
+            startActivity(intent)
+        }
+
     }
 }

@@ -45,4 +45,6 @@
     <string name="cheack_booking">Cheack Booking</string>
     <string name="aboutus">The SLTB is an Institution that makes a great contribution to the State sector through the provision of passenger transport services in Sri Lanka and plays a leading role among the State Institutions serving the public on all days of the year.</string>
     <string name="sltbNumber">Mr.S.M.D.L.K.D. Alwis (Chairman)\t+94 117 706 010\t+94 112 589 683\tchairman@sltb.lk</string>
+    <string name="end_location">End Location</string>
+    <string name="search">Search</string>
 </resources>
