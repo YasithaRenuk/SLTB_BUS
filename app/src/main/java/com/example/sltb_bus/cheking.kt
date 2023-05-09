@@ -53,7 +53,9 @@ class cheking : AppCompatActivity() {
                             bus?.let { tempList.add(it) }
                         }
                     }
-                    adapter.setData(tempList, ui)
+                    if (email != null) {
+                        adapter.setData(tempList, ui,email)
+                    }
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {

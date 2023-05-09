@@ -47,4 +47,6 @@
     <string name="sltbNumber">Mr.S.M.D.L.K.D. Alwis (Chairman)\t+94 117 706 010\t+94 112 589 683\tchairman@sltb.lk</string>
     <string name="end_location">End Location</string>
     <string name="search">Search</string>
+    <string name="bus_numbe">Bus Number:</string>
+    <string name="book_the_teket">Book the teket</string>
 </resources>
