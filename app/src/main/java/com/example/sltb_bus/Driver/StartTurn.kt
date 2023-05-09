@@ -21,9 +21,11 @@ class StartTurn : AppCompatActivity() {
         val adapter = TogoBusAdapter()
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(ui)
+        val email = intent.extras!!.getString("Email")
 
         dbRef = FirebaseDatabase.getInstance().getReference("Bus")
-        dbRef.addValueEventListener(object : ValueEventListener {
+        val checkQuery = dbRef.orderByChild("demail").equalTo(email)
+        checkQuery.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val tempList = ArrayList<BusModel>()
                 for (snapshot in dataSnapshot.children) {

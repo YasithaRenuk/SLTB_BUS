@@ -120,11 +120,11 @@
         android:id="@+id/tvAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
         android:text="Age"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Age"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
     <TextView
@@ -138,6 +138,6 @@
         app:layout_constraintBottom_toTopOf="@+id/update"
         app:layout_constraintEnd_toEndOf="@+id/tvAge"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/Nic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

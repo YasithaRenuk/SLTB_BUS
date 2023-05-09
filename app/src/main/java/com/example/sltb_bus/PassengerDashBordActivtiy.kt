@@ -12,6 +12,7 @@ class PassengerDashBordActivtiy : AppCompatActivity() {
     private lateinit var btprofilview : Button
     private lateinit var btbook: Button
     private lateinit var btchekbooking : Button
+    private lateinit var btnContactus:Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,7 @@ class PassengerDashBordActivtiy : AppCompatActivity() {
         btprofilview =findViewById(R.id.btnViewProfile)
         btbook = findViewById(R.id.btnBooking)
         btchekbooking = findViewById(R.id.btnTimeTable)
+        btnContactus = findViewById(R.id.btnContactus)
 
         val email = intent.extras!!.getString("Email")
 
@@ -28,6 +30,11 @@ class PassengerDashBordActivtiy : AppCompatActivity() {
             val intent = Intent(this, DriverProfileViewActivty::class.java)
             intent.putExtra("Email",email)
             intent.putExtra("Type","Passenger")
+            startActivity(intent)
+        }
+
+        btnContactus.setOnClickListener {
+            val intent = Intent(this, AboutActivety::class.java)
             startActivity(intent)
         }
 
