@@ -6,12 +6,15 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sltb_bus.R
+import com.example.sltb_bus.UpdateBookedtecat
+import com.example.sltb_bus.UpdateBusActivity
 import com.example.sltb_bus.UserTypeActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -32,6 +35,7 @@ class TogoBusAdapter() : RecyclerView.Adapter<TogoBusAdapter.ViewHolder>() {
         val startLocation :TextView
         val EndLocation :TextView
         val date :TextView
+        val update:ImageView
 
         init {
             Select = view.findViewById(R.id.cbCheckbox)
@@ -42,6 +46,7 @@ class TogoBusAdapter() : RecyclerView.Adapter<TogoBusAdapter.ViewHolder>() {
             BusNumber = view.findViewById(R.id.BusNumber)
             date = view.findViewById(R.id.date)
             ivDelete = view.findViewById(R.id.ivDelete)
+            update = view.findViewById(R.id.ivupdate)
         }
 
     }
@@ -74,6 +79,22 @@ class TogoBusAdapter() : RecyclerView.Adapter<TogoBusAdapter.ViewHolder>() {
                 }
             }else{
                 Toast.makeText(context,"Cannot delete unmarked Todo items", Toast.LENGTH_LONG).show()
+            }
+        }
+        holder.update.setOnClickListener {
+            if(holder.Select.isChecked){
+                val intent = Intent(context, UpdateBusActivity::class.java)
+                intent.putExtra("busID",data[position].BusID)
+                intent.putExtra("busNumbr",data[position].BusNumbr)
+                intent.putExtra("demail",data[position].DEmail)
+                intent.putExtra("startLocation",data[position].StartLocation)
+                intent.putExtra("endLocation",data[position].EndLocation)
+                intent.putExtra("startTime",data[position].StartTime)
+                intent.putExtra("endTime",data[position].EndTime)
+                intent.putExtra("date",data[position].Date)
+                intent.putExtra("noFoSeat",data[position].NoFoSeat!!.toInt())
+                intent.putExtra("noFoBookingSeat",data[position].NoFoBookingSeat)
+                context.startActivity(intent)
             }
         }
 

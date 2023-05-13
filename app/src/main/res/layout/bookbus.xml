@@ -116,6 +116,7 @@
         android:id="@+id/ivupdate"
         android:src="@drawable/ic_update"/>
     </LinearLayout>
+
     <ImageView
         android:layout_width="40dp"
         android:layout_height="50dp"

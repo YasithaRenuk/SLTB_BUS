@@ -68,7 +68,7 @@ class UpdateBookedtecat : AppCompatActivity() {
                         val cheak = dbRef.child(bookId).updateChildren(Book).addOnCompleteListener {
                             if(it.isSuccessful){
                                 Toast.makeText(this, "Update Successfully", Toast.LENGTH_LONG).show()
-                                val intent = Intent(this, DriverProfileViewActivty::class.java)
+                                val intent = Intent(this, PassengerDashBordActivtiy::class.java)
                                 intent.putExtra("Email",pemail)
                                 intent.putExtra("Type","Passengers")
                                 startActivity(intent)
