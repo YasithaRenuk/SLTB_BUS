@@ -11,10 +11,12 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sltb_bus.Models.BookModel
 import com.example.sltb_bus.PassengerDashBordActivtiy
 import com.example.sltb_bus.R
+import com.example.sltb_bus.UpdateBookedtecat
 import com.google.firebase.database.*
 
 class BookBusAdapter() : RecyclerView.Adapter<BookBusAdapter.ViewHolder>()  {
@@ -31,6 +33,7 @@ class BookBusAdapter() : RecyclerView.Adapter<BookBusAdapter.ViewHolder>()  {
         val EndLocation : TextView
         val Nofobookedseat :TextView
         val date : TextView
+        val ivupdate : ImageView
 
         init {
             Select = view.findViewById(R.id.cbCheckbox)
@@ -42,6 +45,7 @@ class BookBusAdapter() : RecyclerView.Adapter<BookBusAdapter.ViewHolder>()  {
             date = view.findViewById(R.id.date)
             Nofobookedseat=view.findViewById(R.id.tvBookNumber)
             ivDelete = view.findViewById(R.id.ivDelete)
+            ivupdate = view.findViewById(R.id.ivupdate)
         }
 
     }
@@ -57,6 +61,7 @@ class BookBusAdapter() : RecyclerView.Adapter<BookBusAdapter.ViewHolder>()  {
     }
 
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: BookBusAdapter.ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         dbRef = FirebaseDatabase.getInstance().getReference("Bus")
         val checkQuery = dbRef.child(data[position].busId.toString())
@@ -94,9 +99,30 @@ class BookBusAdapter() : RecyclerView.Adapter<BookBusAdapter.ViewHolder>()  {
                     }else{
                         Toast.makeText(context,"Cannot delete unmarked Todo items", Toast.LENGTH_LONG).show()
                     }
-                    }
-                }override fun onCancelled(databaseError: DatabaseError) {
                 }
+                holder.ivupdate.setOnClickListener {
+                    if(holder.Select.isChecked){
+                        val intent = Intent(context,UpdateBookedtecat::class.java)
+                        intent.putExtra("busID",bus?.BusID.toString())
+                        intent.putExtra("busNumbr",bus?.BusNumbr.toString())
+                        intent.putExtra("demail",bus?.DEmail.toString())
+                        intent.putExtra("startLocation",bus?.StartLocation.toString())
+                        intent.putExtra("endLocation",bus?.EndLocation.toString())
+                        intent.putExtra("startTime",bus?.StartTime.toString())
+                        intent.putExtra("endTime",bus?.EndTime.toString())
+                        intent.putExtra("date",bus?.Date.toString())
+                        intent.putExtra("noFoSeat",bus?.NoFoSeat.toString().toInt())
+                        intent.putExtra("noFoBookingSeat",data[position].noFoSeat.toString())
+                        intent.putExtra("exenoFoBookingSeat",bus?.NoFoBookingSeat.toString())
+                        intent.putExtra("bookId",data[position].bookId.toString())
+                        intent.putExtra("pemail",data[position].pemail.toString())
+                        context.startActivity(intent)
+                    }else{
+                        Toast.makeText(context,"Cannot delete unmarked Todo items", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }override fun onCancelled(databaseError: DatabaseError) {
+            }
         })
     }
 

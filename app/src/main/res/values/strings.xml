@@ -49,4 +49,5 @@
     <string name="search">Search</string>
     <string name="bus_numbe">Bus Number:</string>
     <string name="book_the_teket">Book the teket</string>
+    <string name="update">Update</string>
 </resources>
