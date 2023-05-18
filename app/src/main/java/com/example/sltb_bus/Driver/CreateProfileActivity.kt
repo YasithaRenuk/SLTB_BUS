@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.sltb_bus.DLoginActivity
+import com.example.sltb_bus.Models.AdminModel
 import com.example.sltb_bus.Models.DriverModel
 import com.example.sltb_bus.R
 import com.google.firebase.database.DatabaseReference
@@ -50,7 +51,6 @@ class CreateProfileActivity : AppCompatActivity() {
         val age = etAge.text.toString()
 
         if(fname.isNotEmpty() && lname.isNotEmpty() && nic.isNotEmpty() && age.isNotEmpty()){
-
             val DriverId = dbRef.push().key!!
 
             val driver = DriverModel(DriverId,email,fname,lname,nic,age)
@@ -70,7 +70,6 @@ class CreateProfileActivity : AppCompatActivity() {
                 }.addOnFailureListener { err ->
                     Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
                 }
-
         }else{
             Toast.makeText(this,"Fields cannot be emty", Toast.LENGTH_SHORT).show()
         }

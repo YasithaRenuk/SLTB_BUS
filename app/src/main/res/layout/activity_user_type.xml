@@ -11,12 +11,21 @@
         android:id="@+id/btnDriver"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="64dp"
         android:text="@string/driver"
-        app:layout_constraintBottom_toTopOf="@+id/btnPassenger"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <Button
+        android:id="@+id/btnPassenger"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/passenger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDriver" />
 
     <TextView
         android:id="@+id/copyright_text4"
@@ -24,52 +33,42 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/copyright_sltb"
         android:textColor="#4B3B4E"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPassenger" />
-
-    <Button
-        android:id="@+id/btnPassenger"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="137dp"
-        android:text="@string/passenger"
-        app:layout_constraintBottom_toTopOf="@+id/copyright_text4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDriver" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="274dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="101dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="264dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="275dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnDriver"
+        android:layout_width="327dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/redbus" />
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPassenger" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

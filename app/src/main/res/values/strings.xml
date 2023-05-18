@@ -51,4 +51,6 @@
     <string name="book_the_teket">Book the teket</string>
     <string name="update">Update</string>
     <string name="update_bus_tarn">Update Bus Tarn</string>
+    <string name="add_massages">Add Massages</string>
+    <string name="admin">Admin</string>
 </resources>

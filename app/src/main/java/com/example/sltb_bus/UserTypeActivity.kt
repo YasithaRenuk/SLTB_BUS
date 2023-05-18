@@ -11,6 +11,7 @@ class UserTypeActivity : AppCompatActivity() {
 
     private  lateinit var  btDriver:Button
     private  lateinit var  btPassenger:Button
+    private  lateinit var  btnAdmin:Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,7 @@ class UserTypeActivity : AppCompatActivity() {
 
         btDriver = findViewById(R.id.btnDriver)
         btPassenger = findViewById(R.id.btnPassenger)
+        btnAdmin = findViewById(R.id.btnAdmin)
 
         btDriver.setOnClickListener {
             val intent = Intent(this, DLoginActivity::class.java)
@@ -29,6 +31,12 @@ class UserTypeActivity : AppCompatActivity() {
         btPassenger.setOnClickListener {
             val intent = Intent(this, DLoginActivity::class.java)
             intent.putExtra("Type","Passenger")
+            startActivity(intent)
+        }
+
+        btnAdmin.setOnClickListener {
+            val intent = Intent(this, DLoginActivity::class.java)
+            intent.putExtra("Type","Admin")
             startActivity(intent)
         }
 

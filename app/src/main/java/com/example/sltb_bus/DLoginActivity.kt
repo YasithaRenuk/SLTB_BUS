@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sltb_bus.Driver.MainActivity
 import com.example.sltb_bus.databinding.ActivityDloginBinding
+import com.google.android.play.core.integrity.q
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -26,20 +27,30 @@ class DLoginActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             val email = binding.loginEmail.text.toString()
             val password = binding.loginPassword.text.toString()
-
+            println("jkjfsdjkkljfsljdflsjdflsjdlfjsldjfljsfljlsdjflsdjlfjsldjfsdflkjf")
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { authTask ->
                     if (authTask.isSuccessful) {
-                        val dbRefPath = if (type == "Driver") "Drivers" else "Passengers"
-                        dbRef = FirebaseDatabase.getInstance().getReference(dbRefPath)
+                        var word = ""
+                        if (type == "Driver") {
+                             word = "Drivers"
+                        } else if(type == "Passenger"){
+                             word = "Passengers"
+                        }else {
+                             word = "Admin"
+                        }
+                        println(word)
+                        dbRef = FirebaseDatabase.getInstance().getReference(word)
                         val checkQuery = dbRef.orderByChild("email").equalTo(email)
                         checkQuery.addListenerForSingleValueEvent(object : ValueEventListener {
                             override fun onDataChange(dataSnapshot: DataSnapshot) {
                                 if (dataSnapshot.exists()) {
                                     val nextActivity = if (type == "Driver") {
                                         Intent(this@DLoginActivity, MainActivity::class.java)
-                                    } else {
+                                    } else if(type == "Passenger"){
                                         Intent(this@DLoginActivity, PassengerDashBordActivtiy::class.java)
+                                    }else{
+                                        Intent(this@DLoginActivity, AdminDashbordActivty::class.java)
                                     }
                                     nextActivity.putExtra("Email", email)
                                     startActivity(nextActivity)
@@ -65,10 +76,14 @@ class DLoginActivity : AppCompatActivity() {
         }
 
         binding.SignupRedirectText.setOnClickListener {
-            val loginintent = Intent(this, DSignupActivity::class.java)
-            loginintent.putExtra("Type", type)
-            startActivity(loginintent)
-            finish()
+            if(type == "Admin"){
+                Toast.makeText(this, "Can not create admin accounts", Toast.LENGTH_SHORT).show()
+            }else {
+                val loginintent = Intent(this, DSignupActivity::class.java)
+                loginintent.putExtra("Type", type)
+                startActivity(loginintent)
+                finish()
+            }
         }
     }
 }

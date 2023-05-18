@@ -95,6 +95,8 @@ class TogoBusAdapter() : RecyclerView.Adapter<TogoBusAdapter.ViewHolder>() {
                 intent.putExtra("noFoSeat",data[position].NoFoSeat!!.toInt())
                 intent.putExtra("noFoBookingSeat",data[position].NoFoBookingSeat)
                 context.startActivity(intent)
+            }else{
+                Toast.makeText(context,"Cannot delete unmarked Todo items", Toast.LENGTH_LONG).show()
             }
         }
 

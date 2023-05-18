@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6D6ED"
+    tools:context=".AdminDashbordActivty">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="400dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="11dp"
+        android:gravity="center_horizontal"
+        android:text="@string/welcome_to_sri_lanka_transportations_board"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="229dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTimeTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/passenger" />
+
+    <Button
+        android:id="@+id/btnContactus"
+        android:layout_width="155dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="98dp"
+        android:text="@string/contact_us"
+        app:layout_constraintBottom_toTopOf="@+id/copyright_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btAddMassages"
+        app:layout_constraintTop_toBottomOf="@+id/btnTimeTable" />
+
+    <Button
+        android:id="@+id/btnTimeTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/time_table"
+        app:layout_constraintBottom_toTopOf="@+id/btnContactus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAddBus"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btAddMassages"
+        android:layout_width="143dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="27dp"
+        android:text="@string/add_massages"
+        app:layout_constraintBottom_toBottomOf="@+id/btnContactus"
+        app:layout_constraintEnd_toStartOf="@+id/btnContactus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnContactus" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="255dp"
+        android:layout_height="122dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btnAddBus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="28dp"
+        android:text="@string/add_bus"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnTimeTable"
+        app:layout_constraintEnd_toStartOf="@+id/btnTimeTable"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/copyright_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="164dp"
+        android:text="@string/copyright_sltb"
+        android:textColor="#4B3B4E"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
