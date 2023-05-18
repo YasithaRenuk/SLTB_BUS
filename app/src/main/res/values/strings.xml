@@ -53,4 +53,5 @@
     <string name="update_bus_tarn">Update Bus Tarn</string>
     <string name="add_massages">Add Massages</string>
     <string name="admin">Admin</string>
+    <string name="driver_email">Driver Email</string>
 </resources>

@@ -32,5 +32,10 @@ class AdminDashbordActivty : AppCompatActivity() {
             val intent = Intent(this,SeeAllAddBussActivty::class.java)
             startActivity(intent)
         }
+
+        btnAddBus.setOnClickListener {
+            val intent = Intent(this,AddbusAdminActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
