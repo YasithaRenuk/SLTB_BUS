@@ -54,4 +54,6 @@
     <string name="add_massages">Add Massages</string>
     <string name="admin">Admin</string>
     <string name="driver_email">Driver Email</string>
+    <string name="add_massage">Add Massages</string>
+    <string name="massage">Massage</string>
 </resources>

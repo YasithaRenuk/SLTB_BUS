@@ -12,6 +12,9 @@
         android:theme="@style/Theme.SLTB_BUS"
         tools:targetApi="31">
         <activity
+            android:name=".AddMassagesActivty"
+            android:exported="false" />
+        <activity
             android:name=".AddbusAdminActivity"
             android:exported="false" />
         <activity
