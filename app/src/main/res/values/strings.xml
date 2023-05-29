@@ -56,4 +56,6 @@
     <string name="driver_email">Driver Email</string>
     <string name="add_massage">Add Massages</string>
     <string name="massage">Massage</string>
+    <string name="update_massage">Update Massage</string>
+    <string name="massages">massages</string>
 </resources>

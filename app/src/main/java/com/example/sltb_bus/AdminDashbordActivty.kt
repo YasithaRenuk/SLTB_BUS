@@ -12,6 +12,7 @@ class AdminDashbordActivty : AppCompatActivity() {
     private lateinit var btAddMassages:Button
     private lateinit var btnAddBus:Button
     private lateinit var btnTimeTable:Button
+    private lateinit var btnadd:Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class AdminDashbordActivty : AppCompatActivity() {
         btnAddBus = findViewById(R.id.btnAddBus)
         btAddMassages = findViewById(R.id.btAddMassages)
         btnTimeTable = findViewById(R.id.btnTimeTable)
+        btnadd = findViewById(R.id.btnAdd)
 
         btnContactus.setOnClickListener {
             val intent = Intent(this,AboutActivety::class.java)
@@ -39,6 +41,11 @@ class AdminDashbordActivty : AppCompatActivity() {
         }
 
         btAddMassages.setOnClickListener {
+            val intent = Intent(this,ManageMassagesActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnadd.setOnClickListener {
             val intent = Intent(this,AddMassagesActivty::class.java)
             startActivity(intent)
         }

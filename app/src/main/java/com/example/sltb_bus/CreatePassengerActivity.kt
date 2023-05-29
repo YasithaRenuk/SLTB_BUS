@@ -32,7 +32,7 @@ class CreatePassengerActivity : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Passengers")
 
         val email = intent.extras!!.getString("Email")
-        print(email)
+        //print(email)
         btsave.setOnClickListener {
             if (email != null) {
                 savedriver(email)
@@ -41,7 +41,7 @@ class CreatePassengerActivity : AppCompatActivity() {
     }
 
     private fun savedriver(email:String){
-        print("Haloooooooooooooooooooooooooooooo")
+        //print("Haloooooooooooooooooooooooooooooo")
         val fname = etFName.text.toString()
         val lname = etLName.text.toString()
         val nic = etNIC.text.toString()

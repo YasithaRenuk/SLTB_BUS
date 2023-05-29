@@ -27,7 +27,7 @@ class DLoginActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             val email = binding.loginEmail.text.toString()
             val password = binding.loginPassword.text.toString()
-            println("jkjfsdjkkljfsljdflsjdflsjdlfjsldjfljsfljlsdjflsdjlfjsldjfsdflkjf")
+            //println("jkjfsdjkkljfsljdflsjdflsjdlfjsldjfljsfljlsdjflsdjlfjsldjfsdflkjf")
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { authTask ->
                     if (authTask.isSuccessful) {

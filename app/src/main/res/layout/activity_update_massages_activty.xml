@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6D6ED"
+    tools:context=".UpdateMassagesActivty">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_massage"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="55dp"/>
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="18sp"
+            android:hint="@string/bus_number"
+            android:layout_marginTop="50dp"
+            android:id="@+id/etbusNumber"
+            android:drawablePadding="8dp"/>
+
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="18sp"
+            android:hint="@string/Date"
+            android:layout_marginTop="20dp"
+            android:id="@+id/etdate"
+            android:drawableLeft="@drawable/ic_time"
+            android:drawablePadding="8dp"
+            android:inputType="date"/>
+
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/update"
+            android:id="@+id/btnupdate"
+            android:textSize="18sp"
+            app:cornerRadius = "30dp"
+            android:layout_marginLeft="35dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
