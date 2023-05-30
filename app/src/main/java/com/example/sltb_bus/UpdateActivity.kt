@@ -43,7 +43,7 @@ class UpdateActivity : AppCompatActivity() {
         DAge.setText(age)
         DDID.setText(nic)
         DEmail.setText(email)
-
+//run update function when click the button
         btUpdate.setOnClickListener {
             if (Type != null && id != null) {
                 readdata(Type, id);
@@ -71,8 +71,9 @@ class UpdateActivity : AppCompatActivity() {
         User.put("fristName",fname)
         User.put("lastName",lname)
         User.put("nic",nic)
-
+//update profile
         val cheak = dbRef.child(id).updateChildren(User).addOnCompleteListener {
+           //toast message
             if(it.isSuccessful){
                 Toast.makeText(this, "Data Update successfully", Toast.LENGTH_LONG).show()
                 val intent = Intent(this,DriverProfileViewActivty::class.java)

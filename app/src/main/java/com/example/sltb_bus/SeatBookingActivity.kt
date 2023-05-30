@@ -1,15 +1,14 @@
 package com.example.sltb_bus
 
 import android.content.Intent
-import android.media.session.MediaSession.Token
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.sltb_bus.Driver.DriverProfileViewActivty
 import com.example.sltb_bus.Models.BookModel
+import com.example.sltb_bus.Passenger.PassengerDashBordActivtiy
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -85,7 +84,7 @@ class SeatBookingActivity : AppCompatActivity() {
         }
 
     }
-
+//checking seat availability function
     private fun canbecheker(amount :Int,booked:Int,have:Int):Boolean{
         if(amount>0){
             if((booked+amount)<=have){
@@ -96,7 +95,7 @@ class SeatBookingActivity : AppCompatActivity() {
         }
         return false
     }
-
+//update seat bookings to data base
     private fun updatebooked(pemail:String,BusId:String,Nofoseat:Int){
         dbRef = FirebaseDatabase.getInstance().getReference("Book")
         val BookID = dbRef.push().key!!

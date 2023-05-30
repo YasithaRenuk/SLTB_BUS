@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.sltb_bus.Driver.CreateProfileActivity
+import com.example.sltb_bus.Passenger.CreatePassengerActivity
 import com.example.sltb_bus.databinding.ActivityDsignupBinding
 import com.google.firebase.auth.FirebaseAuth
 

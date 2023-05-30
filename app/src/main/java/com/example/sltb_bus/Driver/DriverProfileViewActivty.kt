@@ -57,13 +57,14 @@ class DriverProfileViewActivty : AppCompatActivity() {
         }
 
     }
-
+//choose profile data from data base
     private  fun readdata(name:String,Type:String){
         if(Type.equals("Driver")) {
             dbRef = FirebaseDatabase.getInstance().getReference("Drivers")
         }else{
             dbRef = FirebaseDatabase.getInstance().getReference("Passengers")
         }
+    //read chosen data.
         val cheak = dbRef.orderByChild("email").equalTo(name)
         cheak.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -97,13 +98,14 @@ class DriverProfileViewActivty : AppCompatActivity() {
             }
         })
     }
+    //read profile details
     private  fun sendtoupdate(type:String){
         val Fname = DFname.text.toString()
         val Lname = DLname.text.toString()
         val age = DAge.text.toString()
         val nic = DDID.text.toString()
         val email = DEmail.text.toString()
-
+//carry details to the updateactivity.kt page
         val intent = Intent(this, UpdateActivity::class.java)
         intent.putExtra("Type",type)
         intent.putExtra("Fname",Fname)
@@ -115,13 +117,16 @@ class DriverProfileViewActivty : AppCompatActivity() {
         startActivity(intent)
     }
 
+    //profile delete driver/passenger
     private  fun delete(Type:String){
         if(Type.equals("Driver")) {
             dbRef = FirebaseDatabase.getInstance().getReference("Drivers")
         }else{
             dbRef = FirebaseDatabase.getInstance().getReference("Passengers")
         }
+        //delete profile from data base
         dbRef.child(id).removeValue().addOnSuccessListener {
+            //toast message
             Toast.makeText(this, "Successfly Deleted", Toast.LENGTH_LONG).show()
             val intent =Intent(this, UserTypeActivity::class.java)
             startActivity(intent)

@@ -44,7 +44,7 @@ class AdminDashbordActivty : AppCompatActivity() {
             val intent = Intent(this,ManageMassagesActivity::class.java)
             startActivity(intent)
         }
-
+//
         btnadd.setOnClickListener {
             val intent = Intent(this,AddMassagesActivty::class.java)
             startActivity(intent)

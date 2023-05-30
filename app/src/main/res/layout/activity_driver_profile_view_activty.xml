@@ -59,14 +59,6 @@
         app:layout_constraintStart_toStartOf="@+id/Email" />
 
     <TextView
-        android:id="@+id/Nic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nic"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tVId"
-        app:layout_constraintEnd_toEndOf="@+id/Age" />
-
-    <TextView
         android:id="@+id/tvFristname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,15 +121,21 @@
 
     <TextView
         android:id="@+id/tVId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="18dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="40dp"
         android:text="NIC"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/update"
-        app:layout_constraintEnd_toEndOf="@+id/tvAge"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Nic" />
+        app:layout_constraintEnd_toEndOf="@+id/tvAge" />
+
+    <TextView
+        android:id="@+id/Nic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tVId"
+        app:layout_constraintEnd_toEndOf="@+id/Age" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

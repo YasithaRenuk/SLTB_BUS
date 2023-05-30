@@ -58,4 +58,6 @@
     <string name="massage">Massage</string>
     <string name="update_massage">Update Massage</string>
     <string name="massages">massages</string>
+    <string name="notification">Notification</string>
+    <string name="add_notification">Add Notification</string>
 </resources>

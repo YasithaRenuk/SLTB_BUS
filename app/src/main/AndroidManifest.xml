@@ -51,7 +51,7 @@
             android:name=".UpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".CreatePassengerActivity"
+            android:name=".Passenger.CreatePassengerActivity"
             android:exported="false" />
         <activity
             android:name=".UserTypeActivity"
@@ -63,7 +63,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PassengerDashBordActivtiy"
+            android:name=".Passenger.PassengerDashBordActivtiy"
             android:exported="false" />
         <activity
             android:name=".Driver.StartTurn"

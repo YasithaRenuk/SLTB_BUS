@@ -1,4 +1,4 @@
-package com.example.sltb_bus
+package com.example.sltb_bus.Passenger
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.sltb_bus.DLoginActivity
 import com.example.sltb_bus.Models.PassengerModel
+import com.example.sltb_bus.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
